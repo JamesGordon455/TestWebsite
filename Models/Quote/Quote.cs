@@ -15,5 +15,9 @@ namespace TestWebsite.Models.Quote
 
         [Display(Name = "Total Rebuild Cost (£)")]
         public decimal TotalRebuildCost { get; set; }
+        [Display(Name = "Flat Roof Cover")]
+        public bool FlatRoofCover { get; set; } = false;
+        [Display(Name = "Roof Size (m2)")]
+        public double ?FlatRoofCoverBody { get; set; }
     }
 }

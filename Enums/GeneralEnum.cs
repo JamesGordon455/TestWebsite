@@ -1,6 +1,6 @@
 ﻿namespace TestWebsite.Enums
 {
-    public class GeneralEnum/*<T>*/
+    public class GeneralEnum
     {
         public enum Title
         {
