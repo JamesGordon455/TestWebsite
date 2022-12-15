@@ -51,38 +51,38 @@
 <script>
     createQuoteSuccess = function (result) {
         if (!result.successful) {
-            addPeNone("#FlatRoofCoverBody");
-            addPeNone("#FlatRoofCoverBodyLabel");
-            removePeNone("#submitQuoteFormBtn");
+            addPeNone("FlatRoofCoverBody");
+            addPeNone("FlatRoofCoverBodyLabel");
+            removePeNone("submitQuoteFormBtn");
             $("#createQuoteForm").trigger("reset");
             alert(result.error);
             return;
         }
         alert("We have recieved your form, your reference is: " + result.reference + ".");
-        addPeNone("#FlatRoofCoverBody");
-        addPeNone("#FlatRoofCoverBodyLabel");
-        removePeNone("#submitQuoteFormBtn");
+        addPeNone("FlatRoofCoverBody");
+        addPeNone("FlatRoofCoverBodyLabel");
+        removePeNone("submitQuoteFormBtn");
         $("#createQuoteForm").trigger("reset");
     }
     createQuoteBegin = function()
     {
-        $("#submitQuoteFormBtn").addClass("pe-none");
+        addPeNone("submitQuoteFormBtn");
     }
 
     $('#FlatRoofCover').click(function() {
         if(this.checked){
-            removePeNone("#FlatRoofCoverBody");
-            removePeNone("#FlatRoofCoverBodyLabel");
+            removePeNone("FlatRoofCoverBody");
+            removePeNone("FlatRoofCoverBodyLabel");
         }else{
-            addPeNone("#FlatRoofCoverBody");
-            addPeNone("#FlatRoofCoverBodyLabel");
+            addPeNone("FlatRoofCoverBody");
+            addPeNone("FlatRoofCoverBodyLabel");
         }
     });
 
     function addPeNone(id){
-        $(id).addClass("pe-none");
+        $('#'+id).addClass("pe-none");
     }
     function removePeNone(id) {
-        $(id).removeClass("pe-none")
+        $('#'+id).removeClass("pe-none")
     }
 </script>
